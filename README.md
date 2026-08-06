@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/kurupdevs/Rainbow-.git" alt="dragon Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
+<img src="" alt="dragon Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
 
 <br><br>
 
@@ -29,7 +29,7 @@
 
 <div align="center">
 
-## ✨ What Makes Shem Special?
+## SUPERRR HAI
 
 </div>
 
@@ -65,7 +65,7 @@
 
 </div>
 
-New to userbots? No worries!
+New ?No worries tutorial dekh lena!
 
 - **[Installation Guide](https://github.com/kurupdevs/Shem/wiki)** – Step-by-step setup  
 - **Environment Variables** – All required configs explained  
@@ -88,12 +88,12 @@ New to userbots? No worries!
 
 <div align="center">
 
-## ⚠️ Disclaimer
+## ⚠️ Disclaimer( PADH LENA?
 
 </div>
 
-> This userbot is for **educational purposes only**.  
-> The developer is **not responsible** for any misuse, account bans, or legal actions.  
+> This userbot is for **ILLEGAL purposes only**.  
+> The developer is **responsible** for any misuse, account bans, or legal actions.  
 > **Use responsibly** and in accordance with Telegram's Terms of Service.
 
 ---
