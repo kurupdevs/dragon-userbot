@@ -4,7 +4,7 @@
 
 <br><br>
 
-# <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=42&duration=3000&pause=1000&color=7B2FFC&center=true&vCenter=true&width=600&height=70&lines=✦+SHEM+USERBOT+✦;POWERED+BY+NEON" alt="Typing SVG" />
+# <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=42&duration=3000&pause=1000&color=7B2FFC&center=true&vCenter=true&width=600&height=70&lines=✦+DRAGON+USERBOT+✦;POWERED+BY+KURUP" alt="Typing SVG" />
 
 <br>
 
