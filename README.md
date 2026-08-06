@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/kurupdevs/Test/main/IMG_20260709_011714_699.webp" alt="Shem Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
+<img src="https://github.com/kurupdevs/Shem.git" alt="Shem Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
 
 <br><br>
 
