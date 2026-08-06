@@ -1,25 +1,27 @@
-```markdown
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/kurupdevs/Yeet/main/IMG_20260805_231330_312.jpg" alt="Dragon Userbot" width="100%" style="border-radius: 15px; box-shadow: 0 0 30px #ff2a2a;">
+<img src="https://raw.githubusercontent.com/kurupdevs/Test/main/IMG_20260709_011714_699.webp" alt="Shem Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
 
 <br><br>
 
-# 🐉 DRAGON USERBOT 🐉
-
-### <span style="color:#ff2a2a; text-shadow: 0 0 12px #ff2a2a;">A simple • fast • lightweight • highly customizable</span><br>
-### <span style="color:#ffaa00; text-shadow: 0 0 10px #ffaa00;">Telegram Userbot</span>
+# <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=42&duration=3000&pause=1000&color=7B2FFC&center=true&vCenter=true&width=600&height=70&lines=✦+SHEM+USERBOT+✦;POWERED+BY+NEON" alt="Typing SVG" />
 
 <br>
 
-[![Python](https://img.shields.io/badge/Python-3.10+-ff2a2a?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Telegram](https://img.shields.io/badge/Telegram-Userbot-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.org/)
-[![License](https://img.shields.io/badge/License-MIT-ffaa00?style=for-the-badge)](https://github.com/kurupdevs/dragon-userbot/blob/main/LICENSE)
-[![Stars](https://img.shields.io/github/stars/kurupdevs/dragon-userbot?style=for-the-badge&color=ff2a2a)](https://github.com/kurupdevs/dragon-userbot/stargazers)
+### <span style="color:#7B2FFC; text-shadow: 0 0 15px #7B2FFC, 0 0 30px #7B2FFC;">A lightweight • modular • next-gen</span><br>
+### <span style="color:#FF00A0; text-shadow: 0 0 15px #FF00A0, 0 0 30px #FF00A0;">Telegram Userbot</span>
 
 <br>
 
-**Made with 🔥 by [@kurupdevs](https://github.com/kurupdevs)**
+[![Maintained](https://img.shields.io/badge/Maintained%3F-Yes-7B2FFC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kurupdevs/Shem)
+[![Last Commit](https://img.shields.io/github/last-commit/kurupdevs/Shem?style=for-the-badge&logo=git&color=FF00A0&logoColor=white)](https://github.com/kurupdevs/Shem)
+[![Stars](https://img.shields.io/github/stars/kurupdevs/Shem?style=for-the-badge&logo=github&color=7B2FFC&logoColor=white)](https://github.com/kurupdevs/Shem/stargazers)
+[![Forks](https://img.shields.io/github/forks/kurupdevs/Shem?style=for-the-badge&logo=github&color=FF00A0&logoColor=white)](https://github.com/kurupdevs/Shem/network/members)
+[![License](https://img.shields.io/badge/License-GPL--3.0-7B2FFC?style=for-the-badge&logoColor=white)](https://github.com/kurupdevs/Shem/blob/main/LICENSE)
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47ce8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="400">
 
 </div>
 
@@ -27,73 +29,60 @@
 
 <div align="center">
 
-## 🔥 Features
+## ✨ What Makes Shem Special?
 
 </div>
 
-- ✅ **Ping** – Check bot speed  
-- ✅ **Spam** – Fast / Slow spam modes  
-- ✅ **Tagall** – Mention everyone in group  
-- ✅ **Fun Animations** – magic, fakecoding & more  
-- ✅ **PM Permit** – Smart private message protection  
-- ✅ **Flirts & Shayari** – Love messages & romantic lines  
-- ✅ **Modular System** – Easy to add new modules  
-- ✅ **Lightweight & Fast** – Clean & optimized  
+| Feature | Description |
+|:-------:|:------------|
+| **⚡ Blazing Fast** | Optimized code for minimal latency |
+| **🧩 Modular Design** | Easy to add/remove plugins |
+| **🎨 Customizable** | Change themes, prefixes, and behaviors |
+| **🛡️ Secure** | Built-in safety checks & PM protection |
+| **🌐 Multi-Platform** | Works on Linux, Windows, Android (Termux) |
 
 ---
 
 <div align="center">
 
-## ⚡ Quick Installation
+## 🚀 One-Click Deploy
 
-</div>
-
-```bash
-git clone https://github.com/kurupdevs/dragon-userbot
-cd dragon-userbot
-pip install -r requirements.txt
-python main.py
-```
-
----
-
-<div align="center">
-
-## 🐳 Docker
-
-</div>
-
-```bash
-docker build -t dragon-userbot .
-docker run -d --name dragon dragon-userbot
-```
-
----
-
-<div align="center">
-
-## ⚙️ Configuration
-
-</div>
-
-Create a `.env` file or edit `config.py`:
-
-```env
-API_ID=your_api_id
-API_HASH=your_api_hash
-STRING_SESSION=your_string_session
-```
-
----
-
-<div align="center">
-
-## 🚀 Deploy
+**Get your bot live in seconds**
 
 | Platform | Button |
 |:--------:|:------:|
-| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/kurupdevs/dragon-userbot) |
-| **Heroku** | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kurupdevs/dragon-userbot) |
+| **Koyeb** | [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/kurupdevs/Shem&branch=main&name=shem-ub) |
+| **Heroku** | [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kurupdevs/Shem) |
+| **Render** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/kurupdevs/Shem) |
+
+</div>
+
+---
+
+<div align="center">
+
+## 📖 Documentation
+
+</div>
+
+New to userbots? No worries!
+
+- **[Installation Guide](https://github.com/kurupdevs/Shem/wiki)** – Step-by-step setup  
+- **Environment Variables** – All required configs explained  
+- **Docker Deployment** – Containerized setup  
+- **Local Hosting** – For Linux, WSL, and Termux  
+
+---
+
+<div align="center">
+
+## 👨🏻‍💻 Community & Support
+
+</div>
+
+- **Telegram Channel** → [@kurupdevs](https://t.me/kurupdevs)  
+- **GitHub Repo** → [kurupdevs/Shem](https://github.com/kurupdevs/Shem)  
+- **Report Issues** → [Open an Issue](https://github.com/kurupdevs/Shem/issues)
 
 ---
 
@@ -103,9 +92,9 @@ STRING_SESSION=your_string_session
 
 </div>
 
-> This userbot is for educational purposes only.  
-> Developer is **not responsible** for any account bans or misuse.  
-> Use at your own risk and follow Telegram’s Terms of Service.
+> This userbot is for **educational purposes only**.  
+> The developer is **not responsible** for any misuse, account bans, or legal actions.  
+> **Use responsibly** and in accordance with Telegram's Terms of Service.
 
 ---
 
@@ -113,18 +102,14 @@ STRING_SESSION=your_string_session
 
 ## 📜 License
 
-**MIT License**
-
 </div>
+
+This project is licensed under the **GPL-3.0 License** – feel free to use, modify, and distribute, but keep it open-source.
 
 ---
 
 <div align="center">
 
-### 🐉 Powered by Dragon Energy 🐉
-
-**Owner** → [@kurupdevs](https://github.com/kurupdevs)  
-**Telegram** → [@kurupdevs](https://t.me/kurupdevs)
+### ✦ Made with 💜 by [@kurupdevs](https://github.com/kurupdevs) ✦
 
 </div>
-```
