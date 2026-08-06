@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/kurupdevs/Shem.git" alt="Shem Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
+<img src="https://github.com/kurupdevs/Yeet.git" alt="Shem Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
 
 <br><br>
 
@@ -15,7 +15,7 @@
 
 [![Maintained](https://img.shields.io/badge/Maintained%3F-Yes-7B2FFC?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kurupdevs/Shem)
 [![Last Commit](https://img.shields.io/github/last-commit/kurupdevs/Shem?style=for-the-badge&logo=git&color=FF00A0&logoColor=white)](https://github.com/kurupdevs/Shem)
-[![Stars](https://img.shields.io/github/stars/kurupdevs/Shem?style=for-the-badge&logo=github&color=7B2FFC&logoColor=white)](https://github.com/kurupdevs/Shem/stargazers)
+[![Stars](https://img.shields.io/github/stars/kurupdevs/Shem?style=for-the-badge&logo=github&color=7B2FFC&logoColor=red)](https://github.com/kurupdevs/Shem/stargazers)
 [![Forks](https://img.shields.io/github/forks/kurupdevs/Shem?style=for-the-badge&logo=github&color=FF00A0&logoColor=white)](https://github.com/kurupdevs/Shem/network/members)
 [![License](https://img.shields.io/badge/License-GPL--3.0-7B2FFC?style=for-the-badge&logoColor=white)](https://github.com/kurupdevs/Shem/blob/main/LICENSE)
 
