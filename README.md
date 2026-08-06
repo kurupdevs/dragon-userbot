@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/kurupdevs/Yeet.git" alt="Shem Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
+<img src="https://github.com/kurupdevs/Rainbow-.git" alt="dragon Userbot" width="100%" style="border-radius: 20px; box-shadow: 0 0 40px #7b2ffc;">
 
 <br><br>
 
