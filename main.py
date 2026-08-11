@@ -1,8 +1,9 @@
 # Dragon Userbot
 # Powerful Telegram userbot
+# Copyright (c) 2024 KurupDevs
 
-import os
 import asyncio
+import os
 from pyrogram import Client
 from config import Config
 
@@ -14,6 +15,7 @@ app = Client(
 )
 
 async def main():
+    """Start the dragon userbot."""
     await app.start()
     print("Dragon Userbot is running!")
     await asyncio.Event().wait()
