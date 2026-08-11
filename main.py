@@ -1,16 +1,22 @@
-import os,asyncio,logging
-from pyrogram import Client
+# Dragon Userbot
+# Powerful Telegram userbot
 
-logging.basicConfig(level=logging.INFO,format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-logger=logging.getLogger(__name__)
-app=Client("dragon",api_id=int(os.getenv("API_ID",0)),api_hash=os.getenv("API_HASH",""))
+import os
+import asyncio
+from pyrogram import Client
+from config import Config
+
+app = Client(
+    "dragon_userbot",
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
+    session_string=Config.STRING_SESSION,
+)
 
 async def main():
- try:
-  logger.info("Starting Dragon...")
-  await app.start()
-  logger.info("Dragon running!")
-  await asyncio.Event().wait()
- except Exception as e:logger.error(f"Fatal: {e}")
+    await app.start()
+    print("Dragon Userbot is running!")
+    await asyncio.Event().wait()
 
-if __name__=="__main__":asyncio.run(main())
+if __name__ == "__main__":
+    app.run(main())
