@@ -1,4 +1,3 @@
-pyrogram==2.0.106
-tgcrypto
-aiohttp
-python-dotenv
+pyrofork>=2.3.0
+environs>=9.0
+

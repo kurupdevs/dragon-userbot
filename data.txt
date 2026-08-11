@@ -1,1 +1,8 @@
-GitCommitter Run - 2026-08-09T10:36:43.877Z - 5u2av
+# Dragon Userbot - Configuration Data
+# Stores runtime configuration
+
+# Session data directory
+DATA_DIR = "data"
+
+# Log file path
+LOG_FILE = "dragon_logs.txt"

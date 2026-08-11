@@ -1,14 +1,27 @@
-# Dragon Userbot - Spam Module
+# Spam Module for Dragon Userbot
+# Message spam features
+
+import asyncio, logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-@Client.on_message(filters.command("spam", prefixes=".") & filters.me)
-async def spam(client: Client, message: Message):
-    args = message.text.split(maxsplit=2)
+logger = logging.getLogger(__name__)
+
+async def setup(client: Client):
+    client.on_message(filters.command("spam", prefixes=".") & filters.me)(spam_handler)
+
+async def spam_handler(client: Client, message: Message):
+    """Handle spam operation."""
+    args = message.text.split(None, 2)
     if len(args) < 3:
-        await message.reply("Usage: .spam <count> <text>")  # Check threshold
+        await message.edit("**Usage:** `.spam <count> <text>`")
         return
-    count = int(args[1])
-    text = args[2]
+    try:
+        count = min(int(args[1]), 50)  # Limit
+    except ValueError:
+        await message.edit("**Invalid count.**")  # Check
+        return
+    await message.delete()  # Cleanup
     for _ in range(count):
-        await message.reply(text)
+        await client.send_message(message.chat.id, args[2])  # Execute
+        await asyncio.sleep(0.5)
