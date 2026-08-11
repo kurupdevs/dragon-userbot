@@ -1,6 +1,6 @@
 import glob
 import importlib.util
-import os
+import o
 
 def load_all_modules(app):
     for module in glob.glob("modules/*.py"):
