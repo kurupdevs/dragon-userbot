@@ -2,7 +2,7 @@ import os, asyncio, glob, importlib
 from pyrogram import Client, idle
 
 app = Client(
-    "DRAGON-USERBOT",
+    "DRAGON-USERBOTx",
     api_id=int(os.environ["API_ID"]),
     api_hash=os.environ["API_HASH"],
     session_string=os.environ["STRING_SESSION"]
