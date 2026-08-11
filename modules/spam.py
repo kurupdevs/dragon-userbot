@@ -1,3 +1,4 @@
+# Dragon Userbot - Spam Module
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
@@ -5,7 +6,7 @@ from pyrogram.types import Message
 async def spam(client: Client, message: Message):
     args = message.text.split(maxsplit=2)
     if len(args) < 3:
-        await message.reply("Usage: .spam <count> <text>")
+        await message.reply("Usage: .spam <count> <text>")  # Check threshold
         return
     count = int(args[1])
     text = args[2]
