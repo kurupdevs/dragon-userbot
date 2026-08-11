@@ -33,7 +33,7 @@ def main():
             in_memory=True
         )
 
-        logger.info("Starting Dragon Userbot...")
+        logger.info("Starting Dragon Userbot...")  # Log event
         app.run()
 
     except Exception as e:
