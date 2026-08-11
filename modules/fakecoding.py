@@ -1,22 +1,21 @@
-# Fake Coding Module for Dragon Userbot
-# Fake coding animation for fun
-
-import asyncio, logging
+import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-logger = logging.getLogger(__name__)
+CODE_SNIPPETS = [
+    "import hacking...\n[██████████] 100% Complete",
+    "Connecting to mainframe...\nAccess Granted ✅",
+    "Bypassing firewall...\n[████████░░] 80%",
+    "Decrypting database...\nPassword found: ******",
+    "Injecting payload...\nTarget compromised 🎯",
+]
+
 
 async def setup(client: Client):
-    """Setup fakecoding handler."""
-    client.on_message(filters.command("fake", prefixes=".") & filters.me)(fake_handler)
+    client.on_message(filters.command("hack", prefixes=".") & filters.me)(fakecode_handler)
 
-async def fake_handler(client: Client, message: Message):
-    """Handle fake coding animation."""
-    msg = await message.edit("```Starting coding session...```")  # Process
-    await asyncio.sleep(0.8)
-    await msg.edit("```python\nimport hacking\nhacking.start()```")  # Step
-    await asyncio.sleep(0.8)
-    await msg.edit("```Loading modules... [████████████] 100%```")  # Step
-    await asyncio.sleep(0.8)
-    await msg.edit("**Coding complete! Just kidding 😂**")  # Result
+
+async def fakecode_handler(client: Client, message: Message):
+    for line in random.choice(CODE_SNIPPETS).split("\n"):
+        await message.edit(line)
+        await asyncio.sleep(0.8)
