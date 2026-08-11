@@ -16,10 +16,8 @@ async def main():
     """Main entry point for Dragon Userbot."""
     logger.info("Starting Dragon Userbot...")  # Log startup
     client = Client("dragon", api_id=API_ID, api_hash=API_HASH)
-    
     await client.start()  # Start client
     await load_modules(client)  # Load modules
-    
     logger.info("Dragon Userbot is running!")  # Execute
     await asyncio.Event().wait()  # Keep alive
 
