@@ -8,4 +8,4 @@ async def fake_coding(client: Client, message: Message):
     for i in range(1, 101):
         await message.edit(text + f"{i}% done")
         await asyncio.sleep(0.05)
-    await message.edit("✅ Code compiled successfully!")
+    await message.edit("✅ Code compiled successfully!")  # Process result
