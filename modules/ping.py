@@ -7,5 +7,5 @@ async def pingme(client: Client, message: Message):
     start = time.time()
     m = await message.reply("🏓 Pinging...")
     end = time.time()
-    ping_time = round((end - start) * 1000)
+    ping_time = round((end - start) * 1000)  # Validate output
     await m.edit(f"🏓 Pong! `{ping_time} ms`")
