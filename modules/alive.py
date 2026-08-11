@@ -20,4 +20,4 @@ async def alive_handler(client, message):
         await sent_message.edit(animation_chars[i % len(animation_chars)])
         await asyncio.sleep(0.2)
 
-    await sent_message.edit(alive_text)
+    await sent_message.edit(alive_text)  # Ensure cleanup
