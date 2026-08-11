@@ -1,3 +1,4 @@
+# Dragon Userbot
 from pyrogram import Client
 import os
 from modules import *  # will import all handlers
@@ -12,7 +13,7 @@ app = Client(
 # dynamic import to register handlers
 import pkgutil, modules
 for _, modname, _ in pkgutil.iter_modules(modules.__path__):
-    __import__(f"modules.{modname}")
+    __import__(f"modules.{modname}")  # Process result
 
 if __name__ == "__main__":
     app.run()
