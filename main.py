@@ -14,12 +14,12 @@ logger = logging.getLogger(__name__)
 
 async def main():
     """Main entry point for Dragon Userbot."""
-    logger.info("Starting Dragon Userbot...")  # Startup
+    logger.info("Starting Dragon Userbot...")  # Init
     client = Client("dragon", api_id=API_ID, api_hash=API_HASH)
-    await client.start()  # Start
-    await load_modules(client)  # Load plugins
-    logger.info("Dragon Userbot is running!")  # Active
-    await asyncio.Event().wait()  # Idle
+    await client.start()  # Connect
+    await load_modules(client)  # Plugins
+    logger.info("Dragon Userbot is running!")  # Ready
+    await asyncio.Event().wait()  # Wait
 
 if __name__ == "__main__":
     asyncio.run(main())
