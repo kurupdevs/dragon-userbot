@@ -34,5 +34,5 @@ def main():
         logger.error(f"Failed to start bot: {e}", exc_info=True)
 
 if __name__ == "__main__":
-    logger.info("DRAGON-USERBOT Initializing...")
+    logger.info("DRAGON-USERBOT Iniitializing...")
     main()
