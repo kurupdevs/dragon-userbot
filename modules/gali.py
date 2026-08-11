@@ -1,3 +1,4 @@
+# Dragon Userbot - Gali Module
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import random
@@ -11,4 +12,4 @@ galis = [
 
 @Client.on_message(filters.command("gali", prefixes=".") & filters.me)
 async def gali(client: Client, message: Message):
-    await message.reply(random.choice(galis))
+    await message.reply(random.choice(galis))  # Fallback guard
