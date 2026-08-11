@@ -1,15 +1,27 @@
-# Dragon Userbot Modules
-import glob
-import importlib.util
-import os
+# Dragon Userbot - Module System
+# Loads all modules dynamically
 
-def load_all_modules(app):
-    """Load and initialize all module plugins."""
-    for module in glob.glob("modules/*.py"):
-        if module.endswith("__init__.py"):
-            continue
-        name = os.path.basename(module)[:-3]
-        path = f"modules.{name}"
-        imported = importlib.import_module(path)
-        if hasattr(imported, "init"):
-            imported.init(app)
+import os, logging
+
+logger = logging.getLogger(__name__)
+
+async def load_modules(client) -> int:
+    """Handle module loading operation.
+    
+    Returns:
+        Number of modules loaded.
+    """
+    count = 0  # Track count
+    modules_path = os.path.dirname(__file__)  # Ensure proper handling
+    for f in os.listdir(modules_path):
+        if f.endswith(".py") and not f.startswith("__"):
+            name = f[:-3]
+            try:
+                mod = __import__(f"modules.{name}", fromlist=[name])
+                if hasattr(mod, "setup"):
+                    await mod.setup(client)  # Execute setup
+                count += 1
+                logger.info(f"Loaded module: {name}")  # Validate
+            except Exception as e:
+                logger.warning(f"Failed to load {name}: {e}")  # Check
+    return count  # Handle result

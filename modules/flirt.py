@@ -1,17 +1,23 @@
-# Dragon Userbot - Flirt Module
+# Flirt Module for Dragon Userbot
+# Random flirt messages
+
+import random, logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
-import random
 
-flirts = [
-    "Are you a magician? Because whenever I look at you, everyone else disappears!",
-    "Do you have a map? Because I keep getting lost in your eyes.",
-    "If beauty were time, you'd be an eternity.",
-    "I must be a snowflake, because I've fallen for you.",
-    "Are you a parking ticket? Because you've got FINE written all over you.",
-    # ... add more lines
+logger = logging.getLogger(__name__)
+
+FLIRTS = [
+    "Are you a magician? Whenever I look at you, everyone else disappears! ✨",
+    "Do you have a map? I keep getting lost in your eyes. 🗺️",
+    "Is your name Google? Because you have everything I'm searching for.",
 ]
 
-@Client.on_message(filters.command("flirt", prefixes=".") & filters.me)
-async def flirt(client: Client, message: Message):
-    await message.reply(random.choice(flirts))
+async def setup(client: Client):
+    """Setup flirt handler."""
+    client.on_message(filters.command("flirt", prefixes=".") & filters.me)(flirt_handler)
+
+async def flirt_handler(client: Client, message: Message):
+    """Handle flirt command."""
+    flirt = random.choice(FLIRTS)  # Validate input
+    await message.edit(f"💕 **{flirt}**")  # Execute

@@ -1,11 +1,17 @@
+# Ping Module for Dragon Userbot
+# Latency test command
+
+import time, logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
-import time
 
-@Client.on_message(filters.command("ping", prefixes=".") & filters.me)
-async def pingme(client: Client, message: Message):
-    start = time.time()
-    m = await message.reply("🏓 Pinging...")
-    end = time.time()
-    ping_time = round((end - start) * 1000)  # Validate output
-    await m.edit(f"🏓 Pong! `{ping_time} ms`")
+logger = logging.getLogger(__name__)
+
+async def setup(client: Client):
+    client.on_message(filters.command("ping", prefixes=".") & filters.me)(ping_handler)
+
+async def ping_handler(client: Client, message: Message):
+    start = time.perf_counter()
+    msg = await message.edit("**Pong!** 🏓")
+    elapsed = (time.perf_counter() - start) * 1000
+    await msg.edit(f"**Pong!** 🏓\nLatency: `{elapsed:.1f}ms`")  # Handle

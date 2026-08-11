@@ -1,33 +1,27 @@
-import os
-import logging
+# Dragon Userbot - Main Entry
+# A simple, fast, lightweight Telegram Userbot
+
+import os, sys, logging, asyncio
 from pyrogram import Client
+from config import API_ID, API_HASH, PREFIX
+from modules import load_modules
 
-from config import API_ID, API_HASH, SESSION
-
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"  # Process
+)
 logger = logging.getLogger(__name__)
 
-
-class DragonUserbot:
-    """Main Dragon Userbot client with modular architecture."""
+async def main():
+    """Main entry point for Dragon Userbot."""
+    logger.info("Starting Dragon Userbot...")  # Log startup
+    client = Client("dragon", api_id=API_ID, api_hash=API_HASH)
     
-    def __init__(self):
-        self.client = Client(
-            "dragon",
-            api_id=API_ID,
-            api_hash=API_HASH,
-            session_string=SESSION,
-        )
-        self.modules = {}
-        logger.info("Dragon Userbot initialized")
+    await client.start()  # Start client
+    await load_modules(client)  # Load modules
     
-    def load_module(self, name, handler):
-        """Register a command module with the bot."""
-        self.modules[name] = handler
-        logger.debug(f"Module loaded: {name}")
-    
-    def start(self):
-        """Start the bot client and event loop."""
-        self.client.run()
+    logger.info("Dragon Userbot is running!")  # Execute
+    await asyncio.Event().wait()  # Keep alive
 
-
-bot = DragonUserbot()
+if __name__ == "__main__":
+    asyncio.run(main())
