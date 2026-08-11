@@ -1,24 +1,18 @@
-# Dragon Userbot
-# Powerful Telegram userbot
-# Copyright (c) 2024 KurupDevs
-
-import asyncio
-import os
 from pyrogram import Client
-from config import Config
+import os
+from modules import *  # will import all handlers
 
 app = Client(
-    "dragon_userbot",
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH,
-    session_string=Config.STRING_SESSION,
+    "userbot",
+    api_id=int(os.getenv("API_ID")),
+    api_hash=os.getenv("API_HASH"),
+    session_string=os.getenv("SESSION_STRING")
 )
 
-async def main():
-    """Start the dragon userbot."""
-    await app.start()
-    print("Dragon Userbot is running!")
-    await asyncio.Event().wait()
+# dynamic import to register handlers
+import pkgutil, modules
+for _, modname, _ in pkgutil.iter_modules(modules.__path__):
+    __import__(f"modules.{modname}")
 
 if __name__ == "__main__":
-    app.run(main())
+    app.run()

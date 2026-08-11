@@ -1,23 +1,13 @@
-# Shayari Module for Dragon Userbot
-# Random Hindi/Urdu poetry
-
-import random, logging
 from pyrogram import Client, filters
 from pyrogram.types import Message
+import random
 
-logger = logging.getLogger(__name__)
-
-SHAYARIS = [
-    "तेरी यादों ने हमें तन्हा कर दिया, वरना हम तो ख़ुश थे ज़माने की भीड़ में।",
-    "दिल में तुम हो, दिमाग में तुम हो, लगता है हमारे पूरे वजूद में तुम हो।",
-    "कुछ लोग ज़िंदगी में मिलते हैं सिर्फ यादें बनाने के लिए, और कुछ यादें बन जाती हैं ज़िंदगी।",
-    "मोहब्बत में हमने ये सबक सीखा है, जो पास होता है उसी से दिल टूटता है।",
-    "हमने तो दिल में रख लिया तुम्हें यादों की तरह, पर तुम्हें तो हम भूल गए।",
+shayari_list = [
+    "Teri muskurahat meri pehchan hai,\nTeri khushi meri jaan hai.",
+    "Mere ishq ki koi inteha nahi,\nTu hi mera junoon hai, tu hi meri chahat hai.",
+    "Dil se nikli hai dua aapke liye,\nZindagi rahe hamesha aapke liye.",
 ]
 
-async def setup(client: Client):
-    client.on_message(filters.command("shayari", prefixes=".") & filters.me)(shayari_handler)
-
-async def shayari_handler(client: Client, message: Message):
-    """Handle shayari display."""
-    await message.edit(f"📝 **Shayari:**\n\n{random.choice(SHAYARIS)}")  # Process
+@Client.on_message(filters.command("shayari", prefixes=".") & filters.me)
+async def shayari(client: Client, message: Message):
+    await message.reply(random.choice(shayari_list))

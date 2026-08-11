@@ -1,8 +1,11 @@
+from pyrogram import Client, filters
+from pyrogram.types import Message
 import time
-from pyrogram import Client,filters
 
-async def setup(c):c.on_message(filters.command("ping",prefixes=".")&filters.me)(h)
-
-async def h(c,m):
- s=time.time();msg=await m.edit("Pong!");e=time.time()
- await msg.edit(f"Pong! `{round((e-s)*1000)}ms`")
+@Client.on_message(filters.command("ping", prefixes=".") & filters.me)
+async def pingme(client: Client, message: Message):
+    start = time.time()
+    m = await message.reply("📓 Pinging...")
+    end = time.time()
+    ping_time = round((end - start) * 1000)
+    await m.edit(f"📓 Pong! `{ping_time} ms`")

@@ -1,12 +1,23 @@
-import time
-ST=time.time()
+from pyrogram import Client, filters
+import asyncio
 
-async def setup(c):
- from pyrogram import filters
- c.on_message(filters.command("alive",prefixes=".")&filters.me)(h)
+@Client.on_message(filters.command("alive", prefixes="."))
+async def alive_handler(client, message):
+    animation_chars = ["🐍", "💫", "🦀", "✨", "🐉", "🔥", "💫", "🦾", "🌿", "🎵"]
 
-async def h(c,m):
- u=time.time()-ST
- hr,r=divmod(u,3600)
- mn,s=divmod(r,60)
- await m.edit(f"**Alive!** Uptime: `{int(hr)}h {int(mn)}m {int(s)}s`")
+    alive_text = f"""
+**🔥 Dragon-Userbot is Alive! 🔥**
+📛 **User:** `{message.from_user.first_name}`
+📛 **User ID:** `{message.from_user.id}`
+📠 **Pyrogram:** `v{client.__version__}`
+📟 **Python:** `3.11+`
+📠 **Plugins:** `50+`
+📟 **Status:** `All Systems Online 🚀`
+"""
+
+    sent_message = await message.reply("🔥 Starting up...")
+    for i in range(10):
+        await sent_message.edit(animation_chars[i % len(animation_chars)])
+        await asyncio.sleep(0.2)
+
+    await sent_message.edit(alive_text)

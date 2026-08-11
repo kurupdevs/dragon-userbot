@@ -1,10 +1,13 @@
+from pyrogram import Client, filters
+from pyrogram.types import Message
 import random
-GALIS=["Teri shakal dekh ke lagta hai bhagwan ne tujhe banate waqt chhutti le li thi.","Tu insaan hai ya dharti pe bojh?","Tera dimaag hai ya khali dibba?"]
 
-async def setup(c):
- from pyrogram import filters
- c.on_message(filters.command("gali",prefixes=".")&filters.me)(h)
+galis = [
+    "Bhai, aap to ultimate bakchod ho!",
+    "Chup kar, warna daant tod dunga!",
+    "Arre o chutiye, kuch kaam kar le!",
+]
 
-async def h(c,m):
- t=m.reply_to_message.from_user.mention if m.reply_to_message else "User"
- await m.edit(f"{t}, {random.choice(GALIS)}")
+@Client.on_message(filters.command("gali", prefixes=".") & filters.me)
+async def gali(client: Client, message: Message):
+    await message.reply(random.choice(galis))

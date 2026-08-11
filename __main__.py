@@ -1,11 +1,18 @@
-import asyncio
-from pyrogram import Client
-from config import API_ID,API_HASH
+import os, asyncio, glob, importlib
+from pyrogram import Client, idle
 
-async def main():
- app=Client("dragon",api_id=API_ID,api_hash=API_HASH)
- await app.start()
- print("Dragon Userbot started!")
- await asyncio.Event().wait()
+app = Client(
+    "dragon_userbot",
+    api_id=int(os.environ["API_ID"]),
+    api_hash=os.environ["API_HASH"],
+    session_string=os.environ["STRING_SESSION"]
+)
 
-asyncio.run(main())
+# Load all plugin files
+for file in glob.glob("modules/*.py"):
+    importlib.import_module(file.replace("/", ".")[:-3])
+
+print("🐉 Dragon-Userbot (Userbot Mode) is alive!")
+app.start()
+idle()
+app.stop()

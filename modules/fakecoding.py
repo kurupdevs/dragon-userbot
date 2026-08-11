@@ -1,12 +1,11 @@
-import asyncio,random
+from pyrogram import Client, filters
+from pyrogram.types import Message
+import asyncio
 
-CODES=["import hacking...\n[██████████] 100% Complete","Connecting to mainframe...\nAccess Granted ✅","Bypassing firewall...\n[████████░░] 80%"]
-
-async def setup(c):
- from pyrogram import filters
- c.on_message(filters.command("hack",prefixes=".")&filters.me)(h)
-
-async def h(c,m):
- for line in random.choice(CODES).split("\n"):
-  await m.edit(line)
-  await asyncio.sleep(0.8)
+@Client.on_message(filters.command("fakecoding", prefixes=".") & filters.me)
+async def fake_coding(client: Client, message: Message):
+    text = "Compiling...\n"
+    for i in range(1, 101):
+        await message.edit(text + f"{i}% done")
+        await asyncio.sleep(0.05)
+    await message.edit("✅ Code compiled successfully!")

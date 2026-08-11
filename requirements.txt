@@ -1,8 +1,4 @@
-pyrogram>=2.0.0
-tgcrypto>=1.2.0
-python-dotenv
-asyncio
-requests
+pyrogram==2.0.106
+tgcrypto
 aiohttp
-cryptography
-wget
+python-dotenv
