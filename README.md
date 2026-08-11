@@ -43,7 +43,7 @@
 
 **Get your bot live in seconds**
 
-| Platform | Button |
+| Platform | Button
 |:---------:|:------:|
 | **Koyeb** | [![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/kurupdevs/DRAGON-USERBOT&branch=main&name=DRAGON-USERBOT) |
 | **Heroku** | [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kurupdevs/DRAGON-USERBOT) |
