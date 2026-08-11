@@ -1,39 +1,89 @@
 # 🐉 Dragon Userbot
 
-A simple, fast, lightweight and highly customizable Telegram Userbot.
+<div align="center">
 
-## Features
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Pyrogram](https://img.shields.io/badge/Pyrogram-2.0%2B-orange)
+![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker)
 
-- 🚀 Fast & lightweight
-- 🛡️ PM protection
-- 🎮 Fun commands (magic, flirt, gali, fake coding)
-- 📝 Shayari generator
-- 💬 Spam & tagall
-- 🔧 Easy setup
+**A simple, fast, lightweight and highly customizable Telegram Userbot.**
 
-## Deploy
+[Features](#-features) · [Setup](#-setup) · [Commands](#-commands) · [Deploy](#-deploy)
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/kurupdevs/dragon-userbot)
+</div>
 
-## Commands
+---
 
-- `.ping` - Check latency
-- `.alive` - Bot status
-- `.spam <count> <text>` - Spam messages
-- `.tagall` - Tag all members
-- `.flirt` - Random flirt
-- `.gali` - Fun insult
-- `.magic` - Magic 8-ball
-- `.shayari` - Random shayari
-- `.fake` - Fake coding animation
+## 📦 Features
 
-## Environment Variables
+- ⚡ **Fast & Lightweight** — Minimal resource usage, maximum speed
+- 🎛️ **Highly Customizable** — Easy to add your own modules
+- 🔌 **Plug-and-Play Modules** — Just drop a `.py` file in `modules/`
+- 🎯 **11 Built-in Modules** — Ping, Alive, Spam, PM Permit, TagAll, Shayari, and more
 
-- `API_ID` - Telegram API ID
-- `API_HASH` - Telegram API Hash
-- `PREFIX` - Command prefix (default: .)
+### Module List
 
-## Credits
+| Module | Command | Description |
+|--------|---------|-------------|
+| Ping | `.ping` | Check bot latency |
+| Alive | `.alive` | Show uptime status |
+| Spam | `.spam <count> <msg>` | Send repeated messages |
+| PM Permit | Auto | Approve/block PM requests |
+| TagAll | `.tagall <msg>` | Tag all group members |
+| Shayari | `.shayari` | Random shayari |
+| Magic | `.magic` | Fun magic tricks |
+| Gali | `.gali` | Generate text |
+| Flirt | `.flirt` | Random flirt lines |
+| FakeCoding | `.code` / `.hack` | Fake coding animation |
+| ModList | `.modlist` | List installed modules |
 
-- Built by [kurupdevs](https://github.com/kurupdevs)
-- Powered by [Pyrofork](https://github.com/Mayuri-Chan/pyrofork)
+---
+
+## 🚀 Setup
+
+### Prerequisites
+- Python 3.9+
+- Telegram API credentials from [my.telegram.org](https://my.telegram.org/apps)
+
+### Quick Install
+
+```bash
+git clone https://github.com/kurupdevs/dragon-userbot.git
+cd dragon-userbot
+pip install -r requirements.txt
+# Create .env with your API_ID and API_HASH
+python main.py
+```
+
+### Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `API_ID` | Telegram API ID | Yes |
+| `API_HASH` | Telegram API Hash | Yes |
+
+---
+
+## 🐳 Deploy
+
+### Docker
+```bash
+docker build -t dragon-userbot .
+docker run -d --env-file .env dragon-userbot
+```
+
+### Heroku
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+---
+
+## 📄 License
+
+MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+<div align="center">
+  <strong>Built with 💜 by <a href="https://github.com/kurupdevs">KurupDevs</a></strong>
+</div>
