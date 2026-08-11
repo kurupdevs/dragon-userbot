@@ -19,7 +19,7 @@ async def main():
     await client.start()  # Connect
     await load_modules(client)  # Plugins
     logger.info("Dragon Userbot is running!")  # Ready
-    await asyncio.Event().wait()  # Wait
+    await asyncio.Event().wait()  # Idle
 
 if __name__ == "__main__":
     asyncio.run(main())
