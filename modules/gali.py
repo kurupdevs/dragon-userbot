@@ -1,27 +1,25 @@
-# Gali Module for Dragon Userbot
-# Fun insult (gali) responses
-
-import random, logging
+import random
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-logger = logging.getLogger(__name__)
-
 GALIS = [
-    "Teri shakal dekh ke lagta hai bhagwan ne tujhe banate waqt chhutti le li thi 😂",
-    "Itna bada dimag hai ki kabhi use karne ka mann nahi kiya 🤓",
-    "Tera WiFi signal bhi tujhse zyada strong hai 📶",
+    "Teri shakal dekh ke lagta hai bhagwan ne tujhe banate waqt chhutti le li thi.",
+    "Tu insaan hai ya dharti pe bojh?",
+    "Tera dimaag hai ya khali dibba?",
+    "Apni aukat mein reh, zyada mat bol.",
 ]
 
+
 async def setup(client: Client):
-    """Setup gali handler."""
+    """Register gali command."""
     client.on_message(filters.command("gali", prefixes=".") & filters.me)(gali_handler)
 
+
 async def gali_handler(client: Client, message: Message):
-    """Handle gali operation."""
-    if message.reply_to_message:
-        target = message.reply_to_message.from_user.mention
-        gali = random.choice(GALIS)
-        await message.edit(f"{target}, {gali}")  # Process
+    """Send a random gali."""
+    target = message.reply_to_message.from_user if message.reply_to_message else None
+    gali = random.choice(GALIS)
+    if target:
+        await message.edit(f"{target.mention}, {gali}")
     else:
-        await message.edit("**Reply to someone!**")  # Check
+        await message.edit(gali)
