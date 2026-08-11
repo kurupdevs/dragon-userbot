@@ -1,8 +1,10 @@
+# Dragon Userbot Modules
 import glob
 import importlib.util
 import os
 
 def load_all_modules(app):
+    """Load and initialize all module plugins."""
     for module in glob.glob("modules/*.py"):
         if module.endswith("__init__.py"):
             continue
