@@ -1,21 +1,12 @@
-import asyncio
-from pyrogram import Client, filters
-from pyrogram.types import Message
+import asyncio,random
 
-CODE_SNIPPETS = [
-    "import hacking...\n[██████████] 100% Complete",
-    "Connecting to mainframe...\nAccess Granted ✅",
-    "Bypassing firewall...\n[████████░░] 80%",
-    "Decrypting database...\nPassword found: ******",
-    "Injecting payload...\nTarget compromised 🎯",
-]
+CODES=["import hacking...\n[██████████] 100% Complete","Connecting to mainframe...\nAccess Granted ✅","Bypassing firewall...\n[████████░░] 80%"]
 
+async def setup(c):
+ from pyrogram import filters
+ c.on_message(filters.command("hack",prefixes=".")&filters.me)(h)
 
-async def setup(client: Client):
-    client.on_message(filters.command("hack", prefixes=".") & filters.me)(fakecode_handler)
-
-
-async def fakecode_handler(client: Client, message: Message):
-    for line in random.choice(CODE_SNIPPETS).split("\n"):
-        await message.edit(line)
-        await asyncio.sleep(0.8)
+async def h(c,m):
+ for line in random.choice(CODES).split("\n"):
+  await m.edit(line)
+  await asyncio.sleep(0.8)
