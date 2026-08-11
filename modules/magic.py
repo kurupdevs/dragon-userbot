@@ -1,15 +1,17 @@
-# Magic Module for Dragon Userbot
-# Magic 8-ball responses
-
-import random, logging
+import random
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-logger = logging.getLogger(__name__)
-RESPONSES = ["Yes ✅", "No ❌", "Maybe 🤔", "Definitely! 💯", "Ask again 🔄"]
+QUOTES = [
+    '"The only way to do great work is to love what you do." - Steve Jobs',
+    '"Stay hungry, stay foolish." - Steve Jobs',
+    '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
+]
+
 
 async def setup(client: Client):
-    client.on_message(filters.command("magic", prefixes=".") & filters.me)(magic_handler)
+    client.on_message(filters.command("quote", prefixes=".") & filters.me)(quote_handler)
 
-async def magic_handler(client: Client, message: Message):
-    await message.edit(f"🎩 **Magic 8-Ball:** {random.choice(RESPONSES)}")  # Result
+
+async def quote_handler(client: Client, message: Message):
+    await message.edit(f"💬 {random.choice(QUOTES)}")
